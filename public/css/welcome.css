@@ -1,0 +1,45 @@
+body{
+
+background-image:url('wallpaper.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+background-attachment: fixed;
+
+ 
+}
+
+.navbar{
+    margin-left: -30px;
+    margin-right: -14px;
+    
+}
+.btn{
+    border-radius: 20%;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+ a:link{
+color: wheat;
+     text-decoration: none;
+     
+}
+
+a:hover{
+    color: lightgreen;
+    
+   
+}
+
+.titlebox{
+  
+    margin-top: 7%;
+    margin-left: 7%;
+    width: 50%;
+    height: 80%;
+    background-color: black;
+    opacity: 0.5;
+    border: solid;
+    text-align: center;
+}
