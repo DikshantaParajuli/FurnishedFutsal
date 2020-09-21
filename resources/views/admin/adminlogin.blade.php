@@ -13,6 +13,13 @@
     
     
 <!--   <link href="{{ asset('/css/patient.css') }}" rel="stylesheet">-->
+       <style>
+        body {
+            background-color: #1a0000;
+        } 
+
+    </style>
+    
     </head>
 <body>
     

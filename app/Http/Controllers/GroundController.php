@@ -48,13 +48,15 @@ class GroundController extends Controller
                 'ground_type' => 'required',
                 'ground_name' => 'required|unique:grounds',
                 'size' => 'required',
-                'price' => 'required'
+                'price' => 'required',
+                'img' => 'required|image'
             ]);
-        
-        if(!Auth::check()){
-            return redirect('/admin');
-        }
-        else{
+        $ground_name = $request->input('ground_name');
+        $image=$request->file('img');
+        $originalName=$image->getClientOriginalName();
+        $new_name = $ground_name."_".$originalName;
+        $image->move(public_path("images"),$new_name);
+       
             $ground = new Ground;
             
             $ground->ground_type = $request->input('ground_type');
@@ -62,11 +64,12 @@ class GroundController extends Controller
             $ground->size = $request->input('size');
             $ground->price = $request->input('price');
             $ground->extra = $request->input('extra');
+            $ground->groundImage = $new_name;
             
             $ground->save();
             return redirect('admin/ground')->with('message', ' Ground Details Entered Successfully');
             
-        }
+       
     }
 
     /**

@@ -26,7 +26,7 @@
     </style> 
     </head>
 <body>
-     @include('admin.navbar')
+     @include('layouts.app')
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">

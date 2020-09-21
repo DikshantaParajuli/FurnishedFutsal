@@ -15,7 +15,7 @@
    <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
     </head>
 <body>
-    @include('layouts.welcome')
+    @include('layouts.app')
     <div class="container-fluid">
         
         <div class="row col-lg-12 ">

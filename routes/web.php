@@ -67,17 +67,20 @@ Route::post('searchExpense', 'Admin\ExpenseController@searchExpense');
 //Admin Gallery Part
 Route::get('addEvent', 'Admin\EventController@index');
 Route::post('addEvent', 'Admin\EventController@addEvent');
+Route::get('/admin/showEvent', 'Admin\EventController@showEvent');
+Route::get('/admin/delevent/{id}', 'Admin\EventController@delEvent');
 
 // Client Booking Ground
 Route::get('/booking', 'BookingController@index'); // getting booking page
 Route::post('/booking', 'BookingController@store');
+Route::get('/viewGrounds', 'ClientController@viewGrounds');
 
 //Client Checking Own Bookings
 Route::get('/mybooking', 'BookingController@show');
 
 //Client Event View
 Route::get('/events', 'ClientController@viewEvent');
-
+Route::get('/eventDetails/{id}', 'ClientController@eventDetails');
 
 Route::get('/package', 'PackageController@index');
 Route::post('/enterpackage', 'PackageController@store');

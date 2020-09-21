@@ -55,7 +55,7 @@
         <div class="row">
          
             <div class="col-lg-12">
-                    <form class="form-control infoform mt-4" method="post" action="/admin/ground">
+                    <form class="form-control infoform mt-4" method="post" action="/admin/ground" enctype="multipart/form-data">
                         @csrf
                             <h2 class="d-flex justify-content-center">Add Futsal/Cricsal Information</h2>
                              <div class="form-group">       
@@ -81,6 +81,10 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control bg-light" id="ground" name="extra" placeholder="Extra">
+                            </div>
+                            <div class="form-group">
+                                <h5 for="select">Select Ground Image</h5>
+                                 <input type="file" class="form-control bg-light" name="img" accept="image/*"/>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Submit" class="btn-info" id="sub_btn">

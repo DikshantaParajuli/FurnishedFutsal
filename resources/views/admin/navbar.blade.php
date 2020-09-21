@@ -28,6 +28,10 @@
       <li class="nav-item">
         <a class="nav-link disabled text-white px-4" href="#">Disabled</a>
       </li>
+         <li class="nav-item">
+        <a class="nav-link disabled text-white px-4" href="#">{{ __('Register') }}</a>
+      </li>
+<!--
       @guest
                             <li class="nav-item">
                                 <a class="nav-link text-white px-4" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -51,6 +55,7 @@
                                
                             </li>
                         @endguest
+-->
     </ul>
   </div>
 

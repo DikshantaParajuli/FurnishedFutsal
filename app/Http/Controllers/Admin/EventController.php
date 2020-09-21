@@ -72,4 +72,15 @@ class EventController extends Controller
         }
 
     }
+    
+    protected function showEvent(){
+        $events = DB::table('events')->get();
+        return view('admin.showEvent')->with('events', $events);
+    }
+    protected function delEvent($id){
+         DB::table('galleries')->where('eventId' ,'=' , $id)->delete();
+        DB::table('events')->where('id', '=', $id)->delete();
+       
+        return redirect('admin/showEvent')->with('message', 'Event Deleted Successfully'); 
+    }
 }

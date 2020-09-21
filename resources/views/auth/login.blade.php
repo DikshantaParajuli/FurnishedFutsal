@@ -15,7 +15,7 @@
    <link href="{{ asset('/css/welcome.css') }}" rel="stylesheet">
     </head>
 <body>
-     @include('layouts.welcome')
+     @include('layouts.app')
     <div class="container-fluid">
     
                     <form method="POST" action="{{ ('login') }}">

@@ -14,16 +14,7 @@
                         
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach ($bookings as $bookings)
-                    <tr>
-                        <td> {{ $bookings->booked_Date }} </td>
-                        <td>{{ $bookings->booked_Time }}</td>
-                        <td>{{ $bookings->booked_Ground }}</td>
-                        
-                    </tr>
-                    @endforeach
-                </tbody>
+           
             </table>
         </div>
     </div>

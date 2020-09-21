@@ -15,11 +15,12 @@ class CreateGroundsTable extends Migration
     {
         Schema::create('grounds', function (Blueprint $table) {
             $table->id();
-            $table->string('ground_type');
+               $table->string('ground_type');
             $table->string('ground_name');
             $table->string('size');
             $table->string('price');
             $table->string('extra')->nullable($value = true);
+            $table->string('groundImage');
             $table->timestamps();
         });
     }
