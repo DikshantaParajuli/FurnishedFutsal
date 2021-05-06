@@ -64,6 +64,9 @@ Route::post('/enter', 'Admin\ExpenseController@enterExpense');
 Route::get('viewExpense', 'Admin\ExpenseController@viewExpense');
 Route::post('searchExpense', 'Admin\ExpenseController@searchExpense');
 
+//Admin Stocks
+Route::get('admin/showStocks', 'Admin\ExpenseController@showStocks');
+
 //Admin Gallery Part
 Route::get('addEvent', 'Admin\EventController@index');
 Route::post('addEvent', 'Admin\EventController@addEvent');

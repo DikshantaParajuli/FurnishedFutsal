@@ -13,34 +13,156 @@
     
     
    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
+    <style>
+    .card-box {
+    position: relative;
+    color: #fff;
+    padding: 20px 10px 40px;
+    margin: 20px 0px;
+}
+.card-box:hover {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+.card-box:hover .icon i {
+    font-size: 100px;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+.card-box .inner {
+    padding: 5px 10px 0 10px;
+}
+.card-box h3 {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+    padding: 0;
+    text-align: left;
+}
+.card-box p {
+    font-size: 15px;
+}
+.card-box .icon {
+    position: absolute;
+    top: auto;
+    bottom: 5px;
+    right: 5px;
+    z-index: 0;
+    font-size: 72px;
+    color: rgba(0, 0, 0, 0.15);
+}
+.card-box .card-box-footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding: 3px 0;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-decoration: none;
+}
+.card-box:hover .card-box-footer {
+    background: rgba(0, 0, 0, 0.3);
+}
+.bg-blue {
+    background-color: #00c0ef !important;
+}
+.bg-green {
+    background-color: #00a65a !important;
+}
+.bg-orange {
+    background-color: #f39c12 !important;
+}
+.bg-red {
+    background-color: #d9534f !important;
+}
+        </style>
+    
     </head>
     
     <body>
+          @include('admin.navbar')
         <div class="container-fluid">
+          
             <div class="row">
-                <div class="col-lg-8">
-                <h1>Todays Booking</h1>
+                <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-blue">
+                    <div class="inner">
+                        <h3> Today's Sales: </h3>
+                        <p> Sales </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <a href="admin/sales" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-warning">
-                    <a href="/package" class="nav-link text-white">Package</a>
-                    </button>
-                </div>
-                <div class="col-lg-2">
-                     <button class="btn btn-danger">
-                    
-                  <a class="nav-link text-white" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+            </div>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                     
-                     </button>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-green">
+                    <div class="inner">
+                        <h3> Today's Booking: </h3>
+                        <p> Book Manually </p>
+                    </div>
+                    <div class="icon">
+                       <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <a href="/admin/booking" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-orange">
+                    <div class="inner">
+                        <h3> 5464 </h3>
+                        <p> Add Expenses </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-plus-square"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <a href="/addExpenses" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 723 </h3>
+                        <p> View Expenses </p>
+                    </div>
+                    <div class="icon">
+                       <i class="fas fa-funnel-dollar"></i>
+                    </div>
+                    <a href="viewExpenses" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+                   <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 723 </h3>
+                        <p> Add Events </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-futbol"></i>
+                        
+                    </div>
+                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+                   <div class="col-lg-3 col-sm-6">
+                <div class="card-box bg-red">
+                    <div class="inner">
+                        <h3> 723 </h3>
+                        <p> View Events </p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <a href="#" class="card-box-footer">View More <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
             </div>
       
         </div>

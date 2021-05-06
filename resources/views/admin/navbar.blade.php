@@ -17,10 +17,10 @@
      <div class="collapse navbar-collapse px-4" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link text-white px-4" href="#">Book <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white px-4" href="/admin/booking">Book <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white px-4" href="#">Gallery</a>
+        <a class="nav-link text-white px-4" href="addEvent">Add Event</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white px-4" href="#">Pricing</a>
